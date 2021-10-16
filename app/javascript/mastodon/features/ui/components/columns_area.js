@@ -30,6 +30,8 @@ import {
 import Icon from 'mastodon/components/icon';
 import ComposePanel from './compose_panel';
 import NavigationPanel from './navigation_panel';
+import NavigationHeader from './navigation_header';
+import NavigationStockTag from './navigation_stock_tag';
 
 import { supportsPassiveEvents } from 'detect-passive-events';
 import { scrollRight } from '../../../scroll';
@@ -227,25 +229,29 @@ class ColumnsArea extends ImmutablePureComponent {
       );
 
       return (
-        <div className='columns-area__panels'>
-          <div className='columns-area__panels__pane columns-area__panels__pane--compositional'>
-            <div className='columns-area__panels__pane__inner'>
-              {renderComposePanel && <ComposePanel />}
+        <div>
+          <NavigationHeader />
+          <NavigationStockTag />
+          <div className='columns-area__panels'>
+            <div className='columns-area__panels__pane columns-area__panels__pane--compositional'>
+              <div className='columns-area__panels__pane__inner'>
+                {renderComposePanel && <ComposePanel />}
+              </div>
             </div>
-          </div>
 
-          <div className='columns-area__panels__main'>
-            <TabsBar key='tabs' />
-            {content}
-          </div>
-
-          <div className='columns-area__panels__pane columns-area__panels__pane--start columns-area__panels__pane--navigational'>
-            <div className='columns-area__panels__pane__inner'>
-              <NavigationPanel />
+            <div className='columns-area__panels__main'>
+              <TabsBar key='tabs' />
+              {content}
             </div>
-          </div>
 
-          {floatingActionButton}
+            <div className='columns-area__panels__pane columns-area__panels__pane--start columns-area__panels__pane--navigational'>
+              <div className='columns-area__panels__pane__inner'>
+                <NavigationPanel />
+              </div>
+            </div>
+
+            {floatingActionButton}
+          </div>
         </div>
       );
     }

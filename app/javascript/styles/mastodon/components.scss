@@ -1,3 +1,88 @@
+.stock-tag {
+  font-weight: bold;
+  background-color: #313543;
+}
+
+.text-success {
+  color: #0aba74;
+}
+
+.text-danger {
+  color: #ff3e3e;
+}
+
+.navigation-header {
+  height: 50px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 999;
+  background: #313543;
+
+  & > a {
+    flex: 0 0 auto;
+  }
+}
+
+.navigation-stock-tag {
+  height: 50px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 999;
+  background: #313543;
+  margin-top: 50px;
+  max-width: 1170px;
+
+  & > a {
+    flex: 0 0 auto;
+  }
+}
+
+.stock-scroll-animation {
+  @keyframes mymove {
+    from {margin-left: 0px;}
+    to {margin-left: -500px;}
+  }
+  animation: mymove 30s infinite;
+}
+
+.stock-scroll-navigation {
+  height: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+  background: #313543;
+
+  & > a {
+    flex: 0 0 auto;
+  }
+
+  .column-link__icon {
+    margin-left: 10px;
+  }
+
+  .column-link, .column-link:hover {
+    background: #313543 !important;
+  }
+}
+
+.columns-area__panels {
+  margin-top: 100px;
+}
+
 .app-body {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
