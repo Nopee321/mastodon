@@ -1374,6 +1374,7 @@ en:
   themes:
     contrast: Mastodon (High contrast)
     default: Mastodon (Dark)
+    stobedon: Stobedon Custom
     mastodon-light: Mastodon (Light)
   time:
     formats:
