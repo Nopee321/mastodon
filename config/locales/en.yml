@@ -1373,8 +1373,7 @@ en:
     title: "%{instance} Terms of Service and Privacy Policy"
   themes:
     contrast: Mastodon (High contrast)
-    default: Stobedon
-    mastodon: Mastodon (Dark)
+    default: Mastodon (Dark)
     mastodon-light: Mastodon (Light)
   time:
     formats:
